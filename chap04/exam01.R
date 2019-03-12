@@ -31,3 +31,8 @@ df_exam <- data.frame(english,math)
 df_exam
 
 read.csv('Data/csv_exam.csv')
+
+library(readxl)
+read_excel("Data/excel_exam.xlsx") -> df_excel
+
+df_excel
