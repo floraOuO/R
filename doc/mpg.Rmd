@@ -3,10 +3,10 @@ title: "mpg"
 author: "rhadoop"
 date: "2019년 3월 12일"
 output:
-  html_document: default
-  html_notebook: default
-  pdf_document:
+  pdf_document: 
     latex_engine: xelatex
+  html_notebook: default
+  html_document: default
   word_document: default
   github_document: default
 ---
