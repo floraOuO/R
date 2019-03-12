@@ -30,9 +30,27 @@ df_exam <- data.frame(english,math)
 
 df_exam
 
-read.csv('Data/csv_exam.csv')
+read.csv('Data/csv_exam.csv') -> df_csv
 
 library(readxl)
 read_excel("Data/excel_exam.xlsx") -> df_excel
 
 df_excel
+
+#colunm
+df_csv$class
+#row
+df_csv[c(2,5,10),c("class","math")]
+df_csv[df_csv$class==2,c("class","math")]
+
+library(sqldf)
+
+sqldf("
+      select class from df_csv
+      ")
+
+sqldf("
+      select class, math
+      from df_csv
+      where class=2
+      ")
