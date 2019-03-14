@@ -1,0 +1,30 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE)
+knitr::opts_knit$set(root.dir=rprojroot::find_rstudio_root_file())
+```
+첫번째행이 변수명이 아닐때
+```{r}
+library(readxl)
+df_exam_novar <- read_excel("Data/excel_exam_novar.xlsx", col_names = F)
+df_exam_novar
+```
+
+
+시트가 여러개일때
+```{r}
+df_exam_sheet <- read_excel("Data/excel_exam_sheet.xlsx", sheet = 3)
+df_exam_sheet
+```
+
+
+문자가 들어 있는 파일을 불러올 때
+```{r}
+df_csv_exam <- read.csv("Data/csv_exam.csv", stringsAsFactors = F)
+str(df_csv_exam)
+```
+

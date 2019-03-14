@@ -3,10 +3,10 @@ title: "mpg"
 author: "rhadoop"
 date: "2019년 3월 12일"
 output:
+  html_document: default
   pdf_document: 
     latex_engine: xelatex
   html_notebook: default
-  html_document: default
   word_document: default
   github_document: default
 ---
@@ -21,7 +21,7 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
+```{r cars, echo=TRUE}
 library(ggplot2)
 str(mpg)
 ```
@@ -30,7 +30,7 @@ str(mpg)
 
 You can also embed plots, for example:
 
-```{r}
+```{r echo=TRUE}
 qplot(drv,cty, data = mpg,geom = 'boxplot',color=drv)
 ```
 
