@@ -14,3 +14,8 @@ write.csv(welfare_female,file = "Data/welfare_female.csv")
 save(welfare_male,welfare_female,file="Data/welfare.rda")
 
 load("Data/welfare.rda")
+
+###################
+# git clone 테스트 
+###################
+# git clone https://github.com/floraOuO/R.git
