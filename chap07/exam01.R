@@ -30,3 +30,7 @@ table(is.na(mpg$hwy))
 mpg %>% filter(!is.na(hwy)) %>% group_by(drv) %>% summarise(mean_hwy=mean(hwy))
 
 mpg %>% group_by(drv) %>% summarise(mean_hwy=mean(hwy,na.rm = T))
+
+#
+# B developer
+#
