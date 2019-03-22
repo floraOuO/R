@@ -7,8 +7,12 @@ library(sqldf)
 
 #sql
 sqldf("
-      select *,(poptotal-popadults)/poptotal*100 as ratio_child from midwest limit 5
-      ") 
+      select *,poptotal-popadults as popchild from midwest
+      ") -> midwest
+
+sqldf("
+      select *, (popchild / poptotal) *100  from midwest limit 5
+      ")
 
 #ratio_child에 값이 제대로 입력되지 않음
 

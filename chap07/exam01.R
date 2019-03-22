@@ -31,8 +31,15 @@ mpg %>% filter(!is.na(hwy)) %>% group_by(drv) %>% summarise(mean_hwy=mean(hwy))
 
 mpg %>% group_by(drv) %>% summarise(mean_hwy=mean(hwy,na.rm = T))
 
-#
-# B developer
-#
-# A developer
-#
+
+#명목형자료, 순위형자료
+gender = c("male","female","male","male","female")
+f_gender = factor(gender,levels = c("male","female"),ordered = T)
+
+f_gender
+
+jumsu = c(1,1,5,5,4,2,3,2,3,3,3,4)
+f_jumsu = factor(jumsu,levels = c(5,4,3,2,1))
+f_jumsu
+sort(jumsu)
+sort(f_jumsu)
